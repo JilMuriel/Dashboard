@@ -1,6 +1,10 @@
 <template>
   <div class="container">
     <h1>{{ title }}</h1>
+    <div class="container-header">
+        <button>asdasd</button>
+        <button>asdasd</button>
+    </div>
   </div>
 </template>
 <script>
@@ -18,5 +22,9 @@ export default {
   max-width: 1500px;
   margin: auto;
   border: 1px solid black;
+  .container-header {
+      display: flex;
+      flex-direction: row;
+  }
 }
 </style>
