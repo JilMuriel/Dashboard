@@ -3,20 +3,22 @@
     <Navbar />
     <CardGroup />
     <Statistics />
+    <Performance />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import CardGroup from "./components/CardGroup";
-import Statistics from './components/Statistics.vue';
-
+import Statistics from "./components/Statistics.vue";
+import Performance from "./components/Performance.vue";
 export default {
   name: "App",
   components: {
     Navbar,
     CardGroup,
-    Statistics
+    Statistics,
+    Performance
   }
 };
 </script>
