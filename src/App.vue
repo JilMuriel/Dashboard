@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <Navbar /> -->
+    <Navbar />
     <Sales />
     <Statistics />
     <Performance />
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-// import Navbar from "./components/Navbar.vue";
+import Navbar from "./components/Navbar.vue";
 import Sales from "./components/Sales";
 // import Statistics from "./components/Statistics.vue";
 // import Performance from "./components/Performance.vue";
 export default {
   name: "App",
   components: {
-    // Navbar,
+    Navbar,
     Sales,
     // Statistics,
     // Performance

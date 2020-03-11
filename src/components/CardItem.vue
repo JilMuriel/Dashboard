@@ -1,6 +1,10 @@
 <template>
   <div class="card-container">
-    <div class="card" v-for="item in salesData" :key="item.id">
+    <div
+      class="card"
+      v-for="item in salesData"
+      :key="item.id"
+    >
       <div class="card-head">
         <h3 class="card-head__title">Sales</h3>
         <img src="@/assets/img/info-icon.png" />
@@ -30,7 +34,15 @@
         </div>
       </div>
       <div class="card-footer">
-        <p>asd</p>
+        <div class="card-footer__container" style="padding: 13px 20px">
+          <p><small>Average Order Value</small></p>
+          <small class=" ml-auto">
+            <section class="sales">
+              <img src="@/assets/img/ph-icon.png" />
+              <span>170,000</span>
+            </section>
+          </small>
+        </div>
       </div>
     </div>
   </div>
@@ -45,16 +57,21 @@ export default {
   padding: 40px;
   max-width: 1500px;
   margin: auto;
-
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   border: 1px solid black;
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: 426px) {
+    grid-template-columns: 1fr;
+  }
 }
 .card {
   background: white;
   position: relative;
-  border-radius: 2px;
+  border-radius: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
 }
 .card-head {
@@ -67,7 +84,7 @@ export default {
   }
 }
 .card-body {
-  padding: 0px 20px 40px;
+  padding: 0px 20px 70px;
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
@@ -84,11 +101,16 @@ export default {
   position: absolute;
   width: 100%;
   bottom: 0;
-  border: 1px solid black;
+  border-top: 1.2px solid rgb(214, 214, 214);
+  .card-footer__container {
+    display: flex;
+  }
 }
+
 .card-head__title {
+  font-weight: normal;
   margin-right: 8px;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .pill {
@@ -124,12 +146,20 @@ export default {
   }
 }
 .text-secondary {
-  color: #898989;
+  color: #808080;
   font-size: 0.7em;
   max-width: 85px;
   margin-bottom: 5px;
 }
 .sales-content {
   margin-top: 10px;
+}
+.ml-auto {
+  margin-left: auto;
+}
+small {
+  color: #808080;
+  font-size: 0.7em;
+  font-weight: normal;
 }
 </style>
