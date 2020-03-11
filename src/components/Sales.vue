@@ -73,13 +73,12 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
-  padding: 40px;
+  padding: 135px 40px 20px;
   max-width: 1500px;
   margin: auto;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid black;
   @media only screen and (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }

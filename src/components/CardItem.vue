@@ -1,6 +1,6 @@
 <template>
   <Fragment>
-    <div class="card" v-for="prop in propss" :key="prop.id">
+    <div class="card" v-for="prop in propss" :key="prop.id" tabindex="1">
       <div class="card-head">
         <h3 class="card-head__title">{{ prop.title }}</h3>
         <img src="@/assets/img/info-icon.png" />
@@ -71,6 +71,11 @@ export default {
   position: relative;
   border-radius: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
+  transition: ease-in-out 0.2s;
+  &:focus {
+      box-shadow: 0 2px 10px rgba(20,59,255,86%);
+      background: #fff;
+  }
 }
 .card-head {
   padding: 15px 20px 10px;
@@ -160,7 +165,7 @@ export default {
 .text-secondary {
   color: #808080;
   font-size: 0.7em;
-max-width: 115px;
+  max-width: 115px;
   margin-bottom: 3px;
 }
 .sales-content {

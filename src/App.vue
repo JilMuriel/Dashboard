@@ -11,14 +11,14 @@
 import Navbar from "./components/Navbar.vue";
 import Sales from "./components/Sales";
 import Statistics from "./components/Statistics.vue";
-// import Performance from "./components/Performance.vue";
+import Performance from "./components/Performance.vue";
 export default {
   name: "App",
   components: {
     Navbar,
     Sales,
     Statistics,
-    // Performance
+    Performance
   }
 };
 </script>

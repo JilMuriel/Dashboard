@@ -1,11 +1,6 @@
 <template>
   <div class="container">
     <div class="container-head">
-      <select>
-        <option>Last 7 Days</option>
-        <option>Last 2 Weeks</option>
-        <option>Last Month</option>
-      </select>
       <section>
         <date-picker
           v-model="value1"
@@ -39,7 +34,9 @@ import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 
 export default {
-  components: { DatePicker },
+  components: {
+    DatePicker,
+  },
   data: () => {
     return {
       value1: [new Date(2019, 1, 1), new Date(2020, 1, 1)]
@@ -71,10 +68,10 @@ export default {
 
 //card header select box
 .card-header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 .card-header__dropdown-group {
-    margin-left: auto;
+  margin-left: auto;
 }
 </style>
