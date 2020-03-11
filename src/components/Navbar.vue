@@ -7,21 +7,15 @@
             <div class="logo-container__primary">
                 <span class="icon">Kollab</span>
             </div>
-            <div>
-                <ul>
-                    <li class="link">
-                        <div class="user-block">
-                            <img class="user-block__icon" src="../assets/img/user-icon.png" alt="user-icon" >
-                           <!-- <p>{{ userData.username }}</p>       -->
-                        </div>
-                    </li>
-                    <li>
-                        notification
-                    </li>
-                    <li>
-                        message
-                    </li>
-                </ul>
+            <div class="link-block">
+                <a href="#" class="user-block">
+                    <img class="user-block__icon" src="../assets/img/user-icon.png" alt="user-icon" >
+                    {{ userData.username }}      
+                </a>
+                <a href="#">
+                    Bell
+                </a>
+                <a>Message</a>
             </div>
         </section>
         <div class="main-top">
@@ -75,14 +69,31 @@ export default {
         align-items: center;
         display: flex;
     }
+    .link-block {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        justify-content: flex-endd;
+        font-size: 0.8em;
+        a {
+            font-size: inherit;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+    }
     .user-block {
         display: flex;
         align-items: center;
-        .user-block__icon {
-            min-height: 40px;
-            width: auto;
-        }
+        font-weight: bold;
     }
+    .user-block__icon {
+        max-height: 25px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+
+
     .logo-container__primary {
         text-align: center;
     }
@@ -98,9 +109,9 @@ export default {
         }
     }
     ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        // display: flex;
+        // justify-content: flex-end;
+        // align-items: center;
         margin: 0;
         li {
             font-size: 0.9em;
