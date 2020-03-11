@@ -7,6 +7,9 @@
       <div class="card-body">
         <p>{{ cardData.body }}</p>
       </div>
+      <div class="card-footer">
+          <p>Avarage Order</p>
+      </div>
     </div>
   </section>
 </template>
@@ -48,7 +51,7 @@ export default {
 
 <style lang="scss" scoped>
 .card-container {
-  padding: 20px;
+  padding: 40px;
   max-width: 1500px;
   margin: auto;
 
@@ -61,13 +64,21 @@ export default {
 .card {
   border: 1px solid black;
   background: white;
+  position: relative;
   .card-head {
     padding: 10px 20px;
     border: 1px solid black;
   }
   .card-body {
-    padding: 20px;
+    padding: 20px 20px 40px;
     border: 1px solid black;
+  }
+  .card-footer {
+      margin-top: auto;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      border: 1px solid black;
   }
 }
 </style>
