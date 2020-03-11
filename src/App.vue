@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Navbar />
+    <CardGroup/>
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
+import CardGroup from './components/CardGroup'
 
 export default {
   name: 'App',
   components: {
-    Navbar
+    Navbar,
+    CardGroup
   }
 }
 </script>
@@ -27,5 +30,10 @@ export default {
   body {
     box-sizing: border-box;
     margin: 0;
+    height: 100%;
+  }
+  #app {
+    background: #F4F5F9;
+    height: 100%;
   }
 </style>

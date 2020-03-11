@@ -6,10 +6,15 @@
 <script>
 export default {
     data: () => {
-        title: 'Hello from Header',
+       return {
+            title: 'Hello from Header',
+       }
     },
 }
 </script>
 <style lang="scss" scoped>
-
+    nav {
+        border: 1px solid black;
+        background: #fff;
+    }
 </style>
