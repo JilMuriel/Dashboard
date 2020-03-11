@@ -1,24 +1,24 @@
 <template>
   <div id="app">
-    <Navbar />
-    <CardGroup />
+    <!-- <Navbar /> -->
+    <Sales />
     <Statistics />
     <Performance />
   </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-import CardGroup from "./components/CardGroup";
-import Statistics from "./components/Statistics.vue";
-import Performance from "./components/Performance.vue";
+// import Navbar from "./components/Navbar.vue";
+import Sales from "./components/Sales";
+// import Statistics from "./components/Statistics.vue";
+// import Performance from "./components/Performance.vue";
 export default {
   name: "App",
   components: {
-    Navbar,
-    CardGroup,
-    Statistics,
-    Performance
+    // Navbar,
+    Sales,
+    // Statistics,
+    // Performance
   }
 };
 </script>
@@ -31,8 +31,8 @@ body {
   margin: 0px;
 }
 html {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
 }
 * {
   margin: 0px;
@@ -41,9 +41,10 @@ body {
   box-sizing: border-box;
   margin: 0;
   height: 100%;
+  background: #f4f5f9;
 }
 #app {
-  background: #f4f5f9;
+
   height: 100%;
 }
 </style>
