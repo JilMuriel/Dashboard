@@ -1,75 +1,73 @@
 <template>
-  <div class="card-container">
-    <div
-      class="card"
-      v-for="item in salesData"
-      :key="item.id"
-    >
+  <Fragment>
+    <div class="card" v-for="prop in propss" :key="prop.id">
       <div class="card-head">
-        <h3 class="card-head__title">Sales</h3>
+        <h3 class="card-head__title">{{ prop.title }}</h3>
         <img src="@/assets/img/info-icon.png" />
       </div>
       <div class="card-body">
         <div class="card-content__left">
-          <div class="pill pill-primary">
+          <div
+            class="pill pill-primary"
+            v-bind:class="{
+              'pill-blue': prop.id === 1,
+              'pill-green': prop.id === 2,
+              'pill-orange': prop.id === 3,
+              'pill-violet': prop.id === 4,
+            }"
+          >
             <span>20%</span>
-            <img src="@/assets/img/arrow-icon.png" />
+            <img
+              v-bind:class="{ rotate90: prop.increase == false }"
+              src="@/assets/img/arrow-icon.png"
+            />
           </div>
         </div>
         <div class="card-content__right">
           <div class="sales-content">
-            <p class="text-secondary">Lifetime Sales</p>
+            <p class="text-secondary">{{ prop.dscp1 }}</p>
             <section class="sales">
               <img src="@/assets/img/ph-icon.png" />
-              <span>175,000</span>
+              <span>{{ prop.sale1 }}</span>
             </section>
           </div>
           <div class="sales-content">
-            <p class="text-secondary">Revenue Sales</p>
+            <p class="text-secondary">{{ prop.dscp2 }}</p>
             <section class="sales">
               <img src="@/assets/img/ph-icon.png" />
-              <span>170,000</span>
+              <span>{{ prop.sale2 }}</span>
             </section>
           </div>
         </div>
       </div>
       <div class="card-footer">
         <div class="card-footer__container" style="padding: 13px 20px">
-          <p><small>Average Order Value</small></p>
+          <p class="text-gray__light">
+            <small>{{ prop.foottext }}</small>
+          </p>
           <small class=" ml-auto">
-            <section class="sales">
+            <section class="sales" v-if="prop.id === 1">
               <img src="@/assets/img/ph-icon.png" />
-              <span>170,000</span>
+              <span class="text-gray__light font-normal">{{ prop.total }}</span>
             </section>
           </small>
         </div>
       </div>
     </div>
-  </div>
+  </Fragment>
 </template>
 <script>
+import { Fragment } from "vue-fragment";
 export default {
-  props: ["salesData"]
+  components: {
+    Fragment
+  },
+  props: ["propss"]
 };
 </script>
 <style lang="scss" scoped>
-.card-container {
-  padding: 40px;
-  max-width: 1500px;
-  margin: auto;
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  border: 1px solid black;
-  @media only screen and (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media only screen and (max-width: 426px) {
-    grid-template-columns: 1fr;
-  }
-}
 .card {
-  background: white;
+  background: #f8faf9;
   position: relative;
   border-radius: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.13);
@@ -94,6 +92,7 @@ export default {
   .card-content__right {
     text-align: right;
     margin-left: auto;
+    min-height: 120px;
   }
 }
 .card-footer {
@@ -129,11 +128,24 @@ export default {
     max-width: 10px;
   }
 }
-.pill-primary {
+.pill-blue {
   background: #7d9ffc;
   color: #fff;
 }
+.pill-green {
+  background: #8bdcb7;
+  color: #fff;
+}
+.pill-orange {
+  background: #f6c37f;
+  color: #fff;
+}
+.pill-violet {
+  background: #c9a6e9;
+  color: #fff;
+}
 .sales {
+  margin-top: 3px;
   img {
     margin-right: 5px;
     position: relative;
@@ -148,11 +160,11 @@ export default {
 .text-secondary {
   color: #808080;
   font-size: 0.7em;
-  max-width: 85px;
-  margin-bottom: 5px;
+max-width: 115px;
+  margin-bottom: 3px;
 }
 .sales-content {
-  margin-top: 10px;
+  margin-top: 7px;
 }
 .ml-auto {
   margin-left: auto;
@@ -161,5 +173,14 @@ small {
   color: #808080;
   font-size: 0.7em;
   font-weight: normal;
+}
+.text-gray__light {
+  color: #b8b9ba;
+}
+.rotate90 {
+  transform: rotate(180deg);
+}
+.rotate0 {
+  transform: rotate(0deg);
 }
 </style>

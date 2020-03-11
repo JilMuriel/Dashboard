@@ -10,14 +10,14 @@
 <script>
 import Navbar from "./components/Navbar.vue";
 import Sales from "./components/Sales";
-// import Statistics from "./components/Statistics.vue";
+import Statistics from "./components/Statistics.vue";
 // import Performance from "./components/Performance.vue";
 export default {
   name: "App",
   components: {
     Navbar,
     Sales,
-    // Statistics,
+    Statistics,
     // Performance
   }
 };
@@ -46,5 +46,14 @@ body {
 #app {
 
   height: 100%;
+}
+input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em!important;
+}
+select {
+  font-size: 0.9em;
+  margin-right: 13px;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>
