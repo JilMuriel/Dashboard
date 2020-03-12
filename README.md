@@ -1,4 +1,4 @@
-# dashboard
+# Vue dashboard take home exam
 
 ## Project setup
 ```
