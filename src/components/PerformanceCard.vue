@@ -16,18 +16,13 @@
           <h5 class="text-secondary">Total Sales(<span><img class="currency-icon" src="@/assets/img/ph-icon.png" /></span>)</h5>
         </div>
       </div>
-      <!-- id: 1,
-          branch: "Makati",
-          totalSales: 5000,
-          percentage: 20,
-          increase: true -->
       <div class="d-grid" v-for="dataProp in dataProps" :key="dataProp.id">
         <div class="grid-item__left">
           <p>{{ dataProp.id }}</p>
           <p>{{ dataProp.branch }}</p>
         </div>
         <div class="grid-item__right">
-          <p style="margin-left: 54px;">{{ dataProp.totalSales }}</p>
+          <p style="margin-left: 54px;">{{ dataProp.totalSales }}.00</p>
           <section class="percentage-section">
             <p class="text-right">{{ dataProp.percentage }}%</p>
             <img
@@ -40,6 +35,7 @@
     </div>
     <div class="card-footer">
       asd
+
     </div>
   </div>
 </template>
@@ -64,8 +60,6 @@ export default {
     margin-top: 3px;
   }
 }
-.card-body {
-}
 .card-footer {
   padding: 8px 20px;
   text-align: right;
@@ -79,9 +73,6 @@ export default {
   grid-template-columns: 40% 1fr;
   padding: 10px 25px;
   border-bottom: 1.5px solid #f3f3f3;
-  div {
-    // border: 1px solid black
-  }
 }
 .d-grid__head {
   padding-top: 14px;

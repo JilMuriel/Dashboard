@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 .performance-container {
-  padding: 40px;
+  padding: 20px 40px 60px;
   max-width: 1500px;
   margin: auto;
 }

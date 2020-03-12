@@ -44,16 +44,26 @@ body {
   background: #f4f5f9;
 }
 #app {
-
   height: 100%;
 }
 input {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em!important;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9em !important;
 }
 select {
   font-size: 0.9em;
   margin-right: 13px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+.mx-input-wrapper input {
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  box-shadow: 0 1px 3px rgba(115, 111, 111, 0.12);
+  padding: 0px 15px;
+  font-size: 0.7em;
+    height: 38px;
+  min-width: 240px;
+  font-weight: 600;
 }
 </style>
