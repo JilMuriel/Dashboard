@@ -42,6 +42,7 @@
           </section>
         </div>
         <!-- Card Body -->
+        <Chart />
       </div>
     </div>
   </div>
@@ -52,12 +53,14 @@ import "vue2-datepicker/index.css";
 import Dropdown from "./Dropdown";
 import Pill from "./Pill";
 import Idt from "./Idt";
+import Chart from "./Chart.vue";
 export default {
   components: {
     DatePicker,
     Dropdown,
     Pill,
-    Idt
+    Idt,
+    Chart
   },
   data: () => {
     return {
@@ -113,7 +116,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  padding: 20px 40px;
+  padding: 0px 40px;
   max-width: 1500px;
   margin: auto;
 
@@ -121,7 +124,7 @@ export default {
     display: flex;
     flex-direction: row;
 
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 }
 .container-body {

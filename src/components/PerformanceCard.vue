@@ -13,7 +13,11 @@
           <h5 class="text-secondary">Branch</h5>
         </div>
         <div>
-          <h5 class="text-secondary">Total Sales(<span><img class="currency-icon" src="@/assets/img/ph-icon.png" /></span>)</h5>
+          <h5 class="text-secondary">
+            Total Sales(<span
+              ><img class="currency-icon" src="@/assets/img/ph-icon.png"/></span
+            >)
+          </h5>
         </div>
       </div>
       <div class="d-grid" v-for="dataProp in dataProps" :key="dataProp.id">
@@ -34,8 +38,17 @@
       </div>
     </div>
     <div class="card-footer">
-      asd
-
+      <div class="pagination-container">
+        <a href="#">
+          <img src="@/assets/img/angle-left-icon.png" />
+        </a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3 ...</a>
+        <a href="#">
+          <img src="@/assets/img/angle-right-icon.png" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -61,8 +74,10 @@ export default {
   }
 }
 .card-footer {
-  padding: 8px 20px;
+  padding: 10px 30px;
   text-align: right;
+  align-items: center;
+  display: flex;
 }
 .peso-icon {
   max-width: 10px;
@@ -121,9 +136,27 @@ p {
   transform: rotate(0deg);
 }
 .currency-icon {
-    max-height: 13px;
-    position: relative;
-    left: 1px;
-    margin: 0 2px;
+  max-height: 13px;
+  position: relative;
+  left: 1px;
+  margin: 0 2px;
+}
+.pagination-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  img {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 10px;
+    width: auto;
+  }
+  a {
+    color: #4e4e4e;
+    font-size: 0.8em;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: 600;
+  }
 }
 </style>
