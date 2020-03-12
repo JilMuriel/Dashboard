@@ -7,13 +7,16 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-<div class="selectdiv ">
+
+    <div class="selectdiv ">
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+        <script src="//unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+        <script src="//unpkg.com/hchs-vue-charts@1.2.8"></script>
   </body>
 </html>
